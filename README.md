@@ -1,6 +1,8 @@
 # genetic-algorithm
 
-this code can be executed in processing so download it from below
+this code can be executed in directly in python
+
+anyways if you want something visual to go in check out processing from here :
 
 ## Installation
 download the package from [here](https://processing.org/download/)
