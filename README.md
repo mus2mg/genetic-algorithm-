@@ -11,4 +11,7 @@ download the package from [here](https://processing.org/download/)
 visit [this](https://py.processing.org/tutorials/gettingstarted/) guide to setup pyhon in processing
 
 ## Executing the code
-download this file and open this file in processing, then run it from the application
+download this file
+change extension to pyde
+remove the import of random and it's references and directly call random method
+and open this file in processing, then run it from the application
