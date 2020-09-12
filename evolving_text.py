@@ -1,5 +1,5 @@
+from random import randint
 import random as rn
-
 
 
 
@@ -18,7 +18,7 @@ class GeneticEvolution:
         for i in range(100):
             sample = ''
             for i in range(len(s)):
-                sample+= chr(int(random(97,123)))
+                sample+= chr(int(randint(97,122)))
             self.population.append(Sample(sample,self.fitness(sample)))
     def fitness(self,sample):
         score=0
@@ -41,7 +41,7 @@ class GeneticEvolution:
             parents = rn.sample(self.population,2)
             child = ''
             for i,j in zip(list(parents[0].s),list(parents[1].s)):
-                if random(0,1)<0.5:
+                if rn.random(0,1)<0.5:
                     child+=i
                 else:
                     child+=j
@@ -53,8 +53,8 @@ class GeneticEvolution:
         for sample in self.population:
             mutated = ''
             for i in sample.s:
-                if random(0,1)<self.mutation_rate:
-                    mutated += chr(int(random(97,123)))
+                if rn.random(0,1)<self.mutation_rate:
+                    mutated += chr(int(randint(97,122)))
                 else:
                     mutated += i
        
@@ -88,7 +88,7 @@ def brute_force(s):
     while True:
         e = ''
         for i in range(len(s)):
-            e+=chr(int(random(97,123)))
+            e+=chr(int(randint(97,122)))
         if e==s:
             return count
         print(e)
