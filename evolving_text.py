@@ -41,7 +41,7 @@ class GeneticEvolution:
             parents = rn.sample(self.population,2)
             child = ''
             for i,j in zip(list(parents[0].s),list(parents[1].s)):
-                if rn.random(0,1)<0.5:
+                if rn.random()<0.5:
                     child+=i
                 else:
                     child+=j
@@ -53,7 +53,7 @@ class GeneticEvolution:
         for sample in self.population:
             mutated = ''
             for i in sample.s:
-                if rn.random(0,1)<self.mutation_rate:
+                if rn.random()<self.mutation_rate:
                     mutated += chr(int(randint(97,122)))
                 else:
                     mutated += i
